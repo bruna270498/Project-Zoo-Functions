@@ -6,11 +6,17 @@ const { id, firstName, lastName, managers, responsibleFor } = employees;
 
 function getEmployeeByName(employeeName) {
   // seu código aqui
-  return employees.find((nome) => {
-    if (nome.firstName === employeeName) {
-      return nome;
+  if (!employeeName) {
+    return {};
+  }
+
+  let o;
+  employees.forEach((nome) => {
+    if (nome.firstName === employeeName || nome.lastName === employeeName) {
+      o = nome;
     }
   });
+  return o;
 }
-console.log(getEmployeeByName('Emery'));
+console.log(getEmployeeByName('Bernard'));
 module.exports = getEmployeeByName;
