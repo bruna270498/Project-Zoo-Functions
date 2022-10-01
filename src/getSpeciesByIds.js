@@ -2,8 +2,6 @@ const data = require('../data/zoo_data');
 
 const { species } = data;
 
-const [id, name, popularity, location, availability, residents] = species;
-
 function getSpeciesByIds(...ids) {
   // seu código aqui
   const ficha = [];

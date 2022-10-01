@@ -2,8 +2,6 @@ const data = require('../data/zoo_data');
 
 const { employees } = data;
 
-const { id, firstName, lastName, managers, responsibleFor } = employees;
-
 function getEmployeeByName(employeeName) {
   // seu código aqui
   if (!employeeName) {
