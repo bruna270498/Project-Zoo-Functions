@@ -15,7 +15,6 @@ function getOldestFromFirstSpecies(id) {
     return r;
   });
   return animal;
-
 }
 console.log(getOldestFromFirstSpecies('fdb2543b-5662-46a7-badc-93d960fdc0a8'));
 
