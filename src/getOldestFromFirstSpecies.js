@@ -3,19 +3,14 @@ const data = require('../data/zoo_data');
 const { employees, species } = data;
 
 function getOldestFromFirstSpecies(id) {
-  const pessoa = employees.filter((nome) => nome.id === id)
-    .map((animais) => animais.responsibleFor);
-  const animal = species.filter((a) => {
-    let r = '';
-    pessoa.forEach((index) => {
-      if (index === a.id) {
-        r = a.name;
-      }
-    });
-    return r;
+  const animal = employees.find((nome) => nome.id === id).responsibleFor[0];
+  const l = species.find((e) => animal === e.id);
+  const a = l.residents.reduce((arr, curr) => {
+    if (curr.age > arr.age) {
+      return curr;
+    }
+    return arr;
   });
-  return animal;
+  return Object.values(a);
 }
-console.log(getOldestFromFirstSpecies('fdb2543b-5662-46a7-badc-93d960fdc0a8'));
-
 module.exports = getOldestFromFirstSpecies;
