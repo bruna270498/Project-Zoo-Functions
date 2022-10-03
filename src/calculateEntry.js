@@ -14,10 +14,12 @@ function calculateEntry(entrants) {
   if (!entrants || Object.keys(entrants).length === 0) {
     return 0;
   }
-  const adulto = countEntrants().adult;
-  const filho = countEntrants().child;
-  const senio = countEntrants().senior;
+  const adulto = countEntrants(entrants).adult;
+  const filho = countEntrants(entrants).child;
+  const senio = countEntrants(entrants).senior;
   const total = (adulto * prices.adult) + (filho * prices.child) + (senio * prices.senior);
   return total;
 }
+console.log(countEntrants([{ age: 5 }, { age: 5 }, { age: 5 }, { age: 18 }, { age: 18 }, { age: 50 }]));
+console.log(calculateEntry());
 module.exports = { calculateEntry, countEntrants };
