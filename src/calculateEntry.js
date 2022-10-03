@@ -3,7 +3,6 @@ const data = require('../data/zoo_data');
 const { prices } = data;
 
 function countEntrants(entrants) {
-  // const entrants = [{ age: 5 }, { age: 5 }, { age: 5 }, { age: 18 }, { age: 18 }, { age: 50 }];
   const criança = entrants.filter((visitante) => visitante.age < 18);
   const adulto = entrants.filter((visitante) => visitante.age >= 18 && visitante.age < 50);
   const senior = entrants.filter((visitante) => visitante.age >= 50);
@@ -20,6 +19,4 @@ function calculateEntry(entrants) {
   const total = (adulto * prices.adult) + (filho * prices.child) + (senio * prices.senior);
   return total;
 }
-console.log(countEntrants([{ age: 5 }, { age: 5 }, { age: 5 }, { age: 18 }, { age: 18 }, { age: 50 }]));
-console.log(calculateEntry());
 module.exports = { calculateEntry, countEntrants };
