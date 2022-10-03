@@ -6,7 +6,6 @@ function countEntrants(entrants) {
   const criança = entrants.filter((visitante) => visitante.age < 18);
   const adulto = entrants.filter((visitante) => visitante.age >= 18 && visitante.age < 50);
   const senior = entrants.filter((visitante) => visitante.age >= 50);
-
   return { adult: adulto.length, child: criança.length, senior: senior.length };
 }
 function calculateEntry(entrants) {
