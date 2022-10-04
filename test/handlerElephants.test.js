@@ -1,7 +1,5 @@
 const handlerElephants = require('../src/handlerElephants');
 
-const { species } = require('../data/zoo_data');
-
 describe('Testes da função HandlerElephants', () => {
   it('retorna a quantidade de elefantes', () => {
     const atual = handlerElephants('count');
