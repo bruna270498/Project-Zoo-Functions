@@ -34,7 +34,6 @@ const validateDay = (day) => {
     throw new Error(dayError);
   }
 };
-console.log(validateDay('segunda'));
 const empty = (one, two) => !one && !two;
 
 const fix12 = (hour, open, close) => ({
