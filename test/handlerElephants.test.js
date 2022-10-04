@@ -17,9 +17,7 @@ describe('Testes da função HandlerElephants', () => {
     expect(atual).toEqual(experado);
   });
   it('retorna undefined se passar parametro vazio', () => {
-    const atual = handlerElephants();
-    const experado = undefined;
-    expect(atual).toEqual(experado);
+    expect(handlerElephants()).toBeUndefined();
   });
   it('retone mensagem se o parametro passado for diferente de string', () => {
     const atual = handlerElephants(5);
@@ -41,7 +39,6 @@ describe('Testes da função HandlerElephants', () => {
   });
   it('ao passar parametro que não tem no objeto retornar null', () => {
     const atual = handlerElephants('nome');
-    const experado = null;
-    expect(atual).toEqual(experado);
+    expect(atual).toBeNull();
   });
 });
