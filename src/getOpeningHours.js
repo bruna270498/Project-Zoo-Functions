@@ -34,7 +34,7 @@ const validateDay = (day) => {
     throw new Error(dayError);
   }
 };
-
+console.log(validateDay('segunda'));
 const empty = (one, two) => !one && !two;
 
 const fix12 = (hour, open, close) => ({
@@ -61,5 +61,4 @@ const getOpeningHours = (day, dataHour) => {
   message += openOrClosed(period, hour, open, close) ? 'open' : 'closed';
   return message;
 };
-console.log(getOpeningHours());
 module.exports = getOpeningHours;
