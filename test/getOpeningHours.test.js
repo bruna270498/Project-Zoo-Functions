@@ -35,7 +35,7 @@ describe('Testes da função getOpeningHours', () => {
     expect(() => getOpeningHours('Sunday', '9:70-am')).toThrow('The minutes must be between 0 and 59');
   });
   it('retorne um erro quando for passado uma string', () => {
-    const texto ='The day must be valid. Example: Monday';
+    const texto = 'The day must be valid. Example: Monday';
     expect(() => getOpeningHours('qualquercoisa')).toThrow(texto);
     expect(() => getOpeningHours('oi')).toThrow(texto);
     expect(() => getOpeningHours('x:xx-am')).toThrow(texto);
