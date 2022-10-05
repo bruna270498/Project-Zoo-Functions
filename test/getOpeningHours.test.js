@@ -30,12 +30,13 @@ describe('Testes da função getOpeningHours', () => {
     expect(() => getOpeningHours('Wednesday', '10:00-cm').toThrow('The abbreviation must be \'AM\' or \'PM\''));
   });
   it('retorna erro quando for passado numero maior que 12 em horas ou maior que 59 em min', () => {
-    expect(() => getOpeningHours('Wednesday', '13:00-am').toThrow('The hour must be between 0 and 12'));
-    expect(() => getOpeningHours('Saturday', '9:60-am').toThrow('The minutes must be between 0 and 59'));
-    expect(() => getOpeningHours('Sunday', '9:70-am').toThrow('The minutes must be between 0 and 59'));
+    expect(() => getOpeningHours('Wednesday', '13:00-am')).toThrow('The hour must be between 0 and 12');
+    expect(() => getOpeningHours('Saturday', '9:60-am')).toThrow('The minutes must be between 0 and 59');
+    expect(() => getOpeningHours('Sunday', '9:70-am')).toThrow('The minutes must be between 0 and 59');
   });
   it('retorne um erro quando for passado uma string', () => {
-    expect(() => getOpeningHours('rrr').toThrow('The day must be valid. Example: Monday'));
-    expect(() => getOpeningHours('oiy').toThrow('The day must be valid. Example: Monday'));
+    expect(() => getOpeningHours('qualquercoisa')).toThrow('The day must be valid. Example: Monday');
+    expect(() => getOpeningHours('oi')).toThrow('The day must be valid. Example: Monday');
+    expect(() => getOpeningHours('x:xx-am')).toThrow("The day must be valid. Example: Monday");
   });
 });
