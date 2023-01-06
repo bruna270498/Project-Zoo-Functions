@@ -1,13 +1,25 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
+# Zoo Functions
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+## Sobre Projeto
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+Foi desenvolvido funções em um zoologico que busca informações sobre os animais como: espécie e local de origem. Além disso, também buscar dados sobre as pessoas que colaboram com a manutenção e cuidado do zoológico. 
+
+### Habilidades desenvolvidas
+
+- Higher Order Functions;
+- Testes com **Jest**;
+- Raciocínio lógico.
+
+### Linguagem utilizada
+
+- JavaScript.
+
+### Como executar
+
+1. Clone o repositório:
+
+- use o comando: ```git clone git@github.com:bruna270498/Project-Zoo-Functions.git```;
+
+2. Instale as dependências:
+
+- ```npm install```;
