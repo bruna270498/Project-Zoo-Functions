@@ -8,7 +8,6 @@ const isStringRepresentNumber = (string, what) => {
     throw new Error(`The ${what} should represent a number`);
   }
 };
-
 const validateAbbreviation = (abbreviation) => {
   if (!['AM', 'PM'].includes(abbreviation)) {
     throw new Error('The abbreviation must be \'AM\' or \'PM\'');
@@ -30,13 +29,11 @@ const validateHour = (hour) => {
     return null;
   }
 };
-
 const validateDay = (day) => {
   if (!weekDays.includes(day)) {
     throw new Error(dayError);
   }
 };
-
 const empty = (one, two) => !one && !two;
 
 const fix12 = (hour, open, close) => ({
@@ -63,5 +60,5 @@ const getOpeningHours = (day, dataHour) => {
   message += openOrClosed(period, hour, open, close) ? 'open' : 'closed';
   return message;
 };
-
+// console.log(getOpeningHours('Saturday', 'x:xx-am'));
 module.exports = getOpeningHours;
